@@ -1,0 +1,13 @@
+server:
+  port: 3306
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://chatter.cc5tvyhu0xmw.ap-northeast-2.rds.amazonaws.com:3306/chatter
+    username: admin
+    password: tlsghk457!
+
+# mybatis config (all mapper xml)
+mybatis:
+  mapper-locations: mappers/**/*.xml
