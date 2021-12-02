@@ -2,11 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nam.join.model.dao.JoinMapper">
     <resultMap id="userResultMap" type="com.nam.join.model.dto.UserDTO">
-    <id property="" column=""/>
-        <result property="" column=""/>
-        <result property="" column=""/>
-        <result property="" column=""/>
-        <result property="" column=""/>
+    <id property="id" column="id"/>
+        <result property="password" column="password"/>
+        <result property="name" column="user_name"/>
+        <result property="phoneNo" column="phone_no"/>
+        <result property="gender" column="gender"/>
     </resultMap>
+    <insert id="joinUser" parameterType="com.nam.join.model.dto.UserDTO">
+      INSERT INTO user
+      (  id
+       , password
+       , user_name
+       , phone_no
+       , gender
+      )
+     VALUES
+     (
+        #{ id }
+      , #{ password }
+      , #{ name }
+      , #{ phoneNo }
+      , #{ gender }
+     )
+    </insert>
 
 </mapper>

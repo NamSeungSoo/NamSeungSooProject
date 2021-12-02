@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/join")
+@RequestMapping("/*")
 public class JoinController {
 
     private final JoinService joinService;
@@ -22,14 +22,15 @@ public class JoinController {
 
     }
 
-    @PostMapping("signup")
+
+    @PostMapping("/signup")
     public ModelAndView joinUser(ModelAndView mv, @ModelAttribute UserDTO parameters){
 
         int result = joinService.joinUser(parameters);
 
         if (result > 0){
 
-            mv.setViewName("");
+            mv.setViewName("/signup");
         }
 
         return mv;

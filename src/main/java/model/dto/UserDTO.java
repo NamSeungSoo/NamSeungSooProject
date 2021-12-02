@@ -9,10 +9,10 @@ import lombok.*;
 @ToString
 public class UserDTO {
 
-    private String email;
-    private String pwd;
+    private String id;
+    private String password;
     private String name;
-    private String phone;
+    private String phoneNo;
     private String gender;
 
 }
