@@ -1,7 +1,7 @@
-package controller;
+package com.nam.join.controller;
 
-import model.dto.UserDTO;
-import model.service.JoinService;
+import com.nam.join.model.dto.UserDTO;
+import com.nam.join.model.service.JoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,16 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/*")
+@RequestMapping("/join/*")
 public class JoinController {
 
     private final JoinService joinService;
 
     @Autowired
     public JoinController(JoinService joinService){
-
         this.joinService = joinService;
-
     }
 
 
@@ -30,7 +28,7 @@ public class JoinController {
 
         if (result > 0){
 
-            mv.setViewName("/signup");
+
         }
 
         return mv;

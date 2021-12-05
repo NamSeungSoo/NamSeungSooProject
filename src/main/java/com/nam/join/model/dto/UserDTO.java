@@ -1,4 +1,4 @@
-package model.dto;
+package com.nam.join.model.dto;
 
 import lombok.*;
 

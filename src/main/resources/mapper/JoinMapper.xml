@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.nam.join.model.dao.JoinMapper">
-    <resultMap id="userResultMap" type="com.nam.join.model.dto.UserDTO">
+<mapper namespace="com.nam.join.com.nam.join.model.dao.JoinMapper">
+    <resultMap id="userResultMap" type="com.nam.join.com.nam.join.model.dto.UserDTO">
     <id property="id" column="id"/>
         <result property="password" column="password"/>
         <result property="name" column="user_name"/>
         <result property="phoneNo" column="phone_no"/>
         <result property="gender" column="gender"/>
     </resultMap>
-    <insert id="joinUser" parameterType="com.nam.join.model.dto.UserDTO">
+    <insert id="joinUser" parameterType="com.nam.join.com.nam.join.model.dto.UserDTO">
       INSERT INTO user
       (  id
        , password

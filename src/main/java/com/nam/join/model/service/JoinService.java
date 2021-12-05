@@ -1,21 +1,25 @@
-package model.service;
+package com.nam.join.model.service;
 
-import model.dao.JoinMapper;
-import model.dto.UserDTO;
+import com.nam.join.model.dao.JoinMapper;
+import com.nam.join.model.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class JoinService {
 
-    private JoinMapper joinMapper;
-
     @Autowired
+    private  JoinMapper joinMapper;
+
     public JoinService(JoinMapper joinMapper){
         this.joinMapper = joinMapper;
     }
 
+
     public int joinUser(UserDTO parameters) {
 
         int result = joinMapper.joinUser(parameters);
+
 
         return result;
     }
